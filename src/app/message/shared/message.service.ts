@@ -13,7 +13,7 @@ export class MessageService {
   }
 
   getMessagesLastByLimit(limit: number): Observable<any> {
-    return this.db.collection('messages', ref => ref.orderBy('message', 'desc').limit(limit)).valueChanges();
+    return this.db.collection('messages', ref => ref.orderBy('time', 'desc').limit(limit)).valueChanges();
   }
 
   getMessagesPaged(limit: number, startAt?: any): Observable<any> {
