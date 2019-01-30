@@ -10,7 +10,7 @@ import {Subscription} from 'rxjs/internal/Subscription';
 })
 export class MessageComponentComponent {
 
-  title = 'Palles app';
+  title = 'Palles';
   messages: any[];
   messagesPaged: Observable<any[]>;
   latest: any;

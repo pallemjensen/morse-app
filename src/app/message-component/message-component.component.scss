@@ -1,9 +1,9 @@
 .button1 {
   background-color: #4CAF50;
-  margin: 4px 2px;
-  border-radius: 8px;
-  margin-right: 12px;
-  padding: 10px;
+  margin: 2px 2px;
+  border-radius: 2px;
+  margin-right: 2px;
+  padding: 2px;
   width: 80px;
 }
 
@@ -15,15 +15,9 @@
   width: 200px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .column {
   float: left;
-  width: 50%;
+  width: 100%;
 }
 
 h2 {
