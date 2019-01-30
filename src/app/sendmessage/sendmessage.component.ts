@@ -3,14 +3,12 @@ import {MessageService} from '../message/shared/message.service';
 import {Observable} from 'rxjs/internal/Observable';
 import {Subscription} from 'rxjs/internal/Subscription';
 
-
 @Component({
   selector: 'app-sendmessage',
   templateUrl: './sendmessage.component.html',
   styleUrls: ['./sendmessage.component.scss']
 })
 export class SendmessageComponent  {
-
 
   title = 'Palles';
   messages: any[];
@@ -29,11 +27,9 @@ export class SendmessageComponent  {
       });
   }
 
-
   convertMessage(message: string): string {
     return this.messageService.convertToText(message);
   }
-
 
   space() {
     this.message += '/';
@@ -73,6 +69,4 @@ export class SendmessageComponent  {
     this.message = '';
     this.humanReadableMessage = '';
   }
-
-
 }

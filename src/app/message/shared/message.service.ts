@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {Observable} from 'rxjs/internal/Observable';
-import {any} from 'codelyzer/util/function';
 
 @Injectable()
 export class MessageService {
