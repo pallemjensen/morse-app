@@ -1,0 +1,7 @@
+<div *ngIf="!messages">Loading...</div>
+<div *ngIf="messages">
+  <div div style="float: left">
+    <h2>{{messages?.length}} latest messages:</h2>
+    <h4 *ngFor="let message of messages">{{'The message was:'}} - {{convertMessage(message.message)}}</h4>
+  </div>
+</div>

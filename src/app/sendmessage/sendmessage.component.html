@@ -1,0 +1,30 @@
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }} morse app!
+  </h1>
+</div>
+<div class="column">
+  <button class="button1" (mousedown)="morse(true);"
+          (mouseup)="morse(false);" ><h2>Morse</h2></button>
+  <button class="button1" (click)="next();"><h2>Next</h2></button>
+  <button class="button1" (click)="space();"><h2>Space</h2></button>
+  <button class="button1" (click)="clear();"><h2>Clear</h2></button>
+</div>
+<div class="column">
+  Human readable message to send:
+  <div *ngIf="message">
+    <h1>{{message}}</h1>  <h2 style="color: darkblue"> {{convertMessage(humanReadableMessage)}} </h2>
+  </div>
+  <div *ngIf="!message">
+    <h4 style="color: darkred">Message will appear here.</h4>
+  </div>
+  <button [disabled]="!message" class="button3" (click)="send()"><h1>Send Message</h1></button>
+</div>
+
+<div style="float: inside">
+  <img src="https://previews.123rf.com/images/alhovik/alhovik1603/alhovik160300047/55657014-morse-code-alphabet-vector-.jpg" height="400" width="600" alt="Angular Logo" >
+</div>
+
+
+

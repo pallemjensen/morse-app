@@ -9,11 +9,15 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { MessageComponentComponent } from './message-component/message-component.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ShowmessagesComponent } from './showmessages/showmessages.component';
+import { SendmessageComponent } from './sendmessage/sendmessage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessageComponentComponent
+    MessageComponentComponent,
+    ShowmessagesComponent,
+    SendmessageComponent
   ],
   imports: [
     BrowserModule,

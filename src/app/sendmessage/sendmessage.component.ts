@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MessageService} from '../message/shared/message.service';
 import {Observable} from 'rxjs/internal/Observable';
 import {Subscription} from 'rxjs/internal/Subscription';
 
+
 @Component({
-  selector: 'app-message-component',
-  templateUrl: './message-component.component.html',
-  styleUrls: ['./message-component.component.scss']
+  selector: 'app-sendmessage',
+  templateUrl: './sendmessage.component.html',
+  styleUrls: ['./sendmessage.component.scss']
 })
-export class MessageComponentComponent {
+export class SendmessageComponent  {
+
 
   title = 'Palles';
   messages: any[];
@@ -22,14 +24,11 @@ export class MessageComponentComponent {
   constructor(private messageService: MessageService) {
     this.subMessages = this.messageService.getMessagesLastByLimit(10)
       .subscribe(messages => {
-      this.messages = messages;
-      this.latest = messages[0];
-    });
+        this.messages = messages;
+        this.latest = messages[0];
+      });
   }
 
-  gOnDestroy(): void {
-    this.subMessages.unsubscribe()
-  }
 
   convertMessage(message: string): string {
     return this.messageService.convertToText(message);
@@ -74,5 +73,6 @@ export class MessageComponentComponent {
     this.message = '';
     this.humanReadableMessage = '';
   }
+
 
 }
